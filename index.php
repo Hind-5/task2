@@ -145,7 +145,22 @@ if(isset($_POST['save'])){
     </div> 
         </form>
     </div>
-</body>
+	
+	<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "dd395c59-7d5a-4ec2-b9bc-2cdc5ba867c5", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "c3a050af-7701-49a0-9da4-5afac2bf02c4", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+	
+	</body>
 <script src="main.js"></script>
 </html>
 
